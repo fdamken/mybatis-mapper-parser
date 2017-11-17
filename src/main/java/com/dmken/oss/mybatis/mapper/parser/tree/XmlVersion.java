@@ -40,4 +40,20 @@ public enum XmlVersion {
      *
      */
     private final String version;
+
+    /**
+     * Finds the XML version representation of the given version.
+     *
+     * @param version
+     *            The version to search for.
+     * @return The XML version.
+     */
+    public static XmlVersion findByVersion(final String version) {
+        for (final XmlVersion xmlVersion : XmlVersion.values()) {
+            if (version.equals(xmlVersion.version)) {
+                return xmlVersion;
+            }
+        }
+        return null;
+    }
 }

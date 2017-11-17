@@ -37,4 +37,14 @@ public class SimpleXmlValue extends AbstractXmlValue {
      *
      */
     private final String data;
+
+    /**
+     * {@inheritDoc}
+     *
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return this.data;
+    }
 }

@@ -58,4 +58,14 @@ public class XmlTag extends AbstractXmlTag {
 
         this.children = children;
     }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @see com.dmken.oss.mybatis.mapper.parser.tree.AbstractXmlTag#toString()
+     */
+    @Override
+    public String toString() {
+        return this.getName() + this.getParameters().toString() + this.children.toString();
+    }
 }

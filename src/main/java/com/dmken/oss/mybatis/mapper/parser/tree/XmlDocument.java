@@ -46,6 +46,12 @@ public class XmlDocument {
      */
     private final Charset encoding;
     /**
+     * The document type.
+     *
+     */
+    // TODO: Parse document type!
+    private final String doctype;
+    /**
      * The actual document represented by the root XML tag.
      *
      */

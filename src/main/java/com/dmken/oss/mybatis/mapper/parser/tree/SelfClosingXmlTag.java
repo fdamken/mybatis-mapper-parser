@@ -39,4 +39,14 @@ public class SelfClosingXmlTag extends AbstractXmlTag {
     public SelfClosingXmlTag(final String name, final Map<String, String> parameters) {
         super(name, parameters);
     }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @see com.dmken.oss.mybatis.mapper.parser.tree.AbstractXmlTag#toString()
+     */
+    @Override
+    public String toString() {
+        return this.getName() + "/>" + this.getParameters().toString();
+    }
 }
