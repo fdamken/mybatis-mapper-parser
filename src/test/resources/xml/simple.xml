@@ -2,7 +2,7 @@
  - Hello
  -->
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xml>
+<!DOCtype xml>
 <root>
 	<child order="1">
 		<name value='Fabian Damken' />

@@ -163,8 +163,7 @@ public class XmlScanner {
             return TokenType.STRINGLIT;
         }
         if (this.isIdentifierStart(this.current)) {
-            this.scanIdentifier();
-            return TokenType.IDENTIFIER;
+            return this.scanIdentifier();
         }
         final int old = this.current;
         this.take();
@@ -245,14 +244,23 @@ public class XmlScanner {
      *
      * @throws ScannerException
      *             If any error occurs.
+     * @return The actual token type (if the identifier was a keyword).
      */
-    private void scanIdentifier() throws ScannerException {
+    private TokenType scanIdentifier() throws ScannerException {
         this.take();
         while (this.isIdentifierPart(this.current)) {
             if (!this.scanEscapeSequences()) {
                 this.take();
             }
         }
+
+        final String id = this.builder.toString();
+        for (final TokenType type : TokenType.keywords()) {
+            if (type.isRepresentedBy(id)) {
+                return type;
+            }
+        }
+        return TokenType.IDENTIFIER;
     }
 
     /**

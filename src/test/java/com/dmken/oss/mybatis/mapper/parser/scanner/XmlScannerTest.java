@@ -48,7 +48,7 @@ public class XmlScannerTest {
         this.add(expected, ">", RANGEL);
         this.add(expected, "<", LANGEL);
         this.add(expected, "!", EXMARK);
-        this.add(expected, "DOCTYPE", IDENTIFIER);
+        this.add(expected, "DOCtype", DOCTYPE);
         this.add(expected, "xml", IDENTIFIER);
         this.add(expected, ">", RANGEL);
         this.add(expected, "<", LANGEL);

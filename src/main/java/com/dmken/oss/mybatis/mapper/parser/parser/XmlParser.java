@@ -133,7 +133,7 @@ public class XmlParser {
         if (this.optional(EXMARK)) {
             // TODO: Parse DOCTYPE.
 
-            this.expect(IDENTIFIER, "DOCTYPE", false);
+            this.expect(DOCTYPE);
 
             // Mock.
             doctype = "";
