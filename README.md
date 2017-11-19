@@ -1,1 +1,1 @@
-# Yet Another Plugin Framework
+# MyBatis Mapper Parser
